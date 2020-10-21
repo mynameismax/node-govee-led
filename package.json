@@ -26,7 +26,7 @@
     }
   ],
   "license": "MIT",
-  "homepage": "https://github.com/mynameismrtime/node-govee-led",
+  "homepage": "https://github.com/mynameismrtime/node-govee-led#readme",
   "dependencies": {
     "axios": "^0.20.0",
     "hex-rgb-conv": "^1.1.1"
