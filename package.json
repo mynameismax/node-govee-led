@@ -1,0 +1,13 @@
+{
+  "name": "node-govee-led",
+  "version": "0.0.1",
+  "description": "An unofficial NodeJS wrapper of the official Govee API to control your devices.",
+  "main": "index.js",
+  "keywords": ["govee", "api", "led"],
+  "author": "MrTime#6969 https://mrti.me",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "hex-rgb-conv": "^1.1.1"
+  }
+}
