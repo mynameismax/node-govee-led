@@ -35,12 +35,12 @@ To get started with this package, you just need to run `npm i node-govee-led`. N
 
 ## How to get the device's MAC address (and model)
 
-Finding the LED's MAC address is one of the hardest parts of setup. Luckily, I've made it easy for you to do using this package (and you also find out the model, too!). You just need to run the code below (of course replacing `<api key>` with your api key), and leaving the mac address and model fields empty.
+Finding the LED's MAC address is one of the hardest parts of setup. Luckily, I've made it easy for you to do using this package (and you also find out the model, too!). You just need to run the code below (of course replacing `<govee api key>` with your api key), and leaving the mac address and model fields empty.
 
 	const Govee = require("node-govee-led");
 
 	const GoveeClient = new Govee({
-		apiKey: "e879c4e8-4ed6-4186-81a9-5025bc97b907",
+		apiKey: "<govee api key>",
 		mac: "",
 		model: ""
 	})
