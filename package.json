@@ -1,34 +1,33 @@
 {
   "name": "node-govee-led",
   "description": "An unofficial NodeJS wrapper of the official Govee API to control your devices",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "main": "index.js",
   "keywords": [
     "govee",
     "led",
     "api"
   ],
-  "author": "mynameismrtime",
+  "author": "mynameismax",
   "contributors": [
     {
-      "name": "mynameismrtime (Max)",
+      "name": "mynameismax (Max)",
       "email": "max@maxx.lol",
       "web": "mrti.me/maxx.lol"
     }
   ],
   "bugs": {
-    "web": "https://github.com/mynameismrtime/node-govee-led/issues"
+    "web": "https://github.com/mynameismax/node-govee-led/issues"
   },
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/mynameismrtime/node-govee-led.git"
+      "url": "https://github.com/mynameismax/node-govee-led.git"
     }
   ],
   "license": "MIT",
-  "homepage": "https://github.com/mynameismrtime/node-govee-led#readme",
+  "homepage": "https://github.com/mynameismax/node-govee-led#readme",
   "dependencies": {
-    "axios": "^0.20.0",
-    "hex-rgb-conv": "^1.1.1"
+    "axios": "^0.21.0"
   }
 }
