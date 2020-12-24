@@ -9,29 +9,33 @@ class GoveeLED {
 	}
 
 	request(endpoint, reqData, method) {
-		if (this.mac === "") throw new Error("No MAC Address provided.");
-		if (this.model === "") throw new Error("No Model provided.");
 
-		let reqURL = this.basePath + endpoint;
+		return new Promise( ( resolve, reject ) => {
 
-		var data = JSON.stringify(reqData);
+			if (this.mac === "") return reject(new Error("No MAC Address provided."));
+			if (this.model === "") return reject(new Error("No Model provided."));
 
-		var config = {
-			method: method,
-			url: reqURL,
-			headers: { 
-				'Govee-API-Key': this.apiKey, 
-				'Content-Type': 'application/json'
-			},
-			data: data
-		};
+			let reqURL = this.basePath + endpoint;
 
-		axios(config)
-		.then(function (response) {
-			return response.data;
-		})
-		.catch(function (error) {
-			throw new Error(error);
+			var data = JSON.stringify(reqData);
+
+			var config = {
+				method: method,
+				url: reqURL,
+				headers: { 
+					'Govee-API-Key': this.apiKey, 
+					'Content-Type': 'application/json'
+				},
+				data: data
+			};
+
+			axios(config)
+			.then(function (response) {
+				resolve(response.data);
+			})
+			.catch(function (error) {
+				reject(error);
+			});
 		});
 	}
 
@@ -39,7 +43,7 @@ class GoveeLED {
 		var regex = /^#([0-9A-F]{3}){1,2}$/i;
 		if (!regex.test(hexCode)) throw new Error("Invalid Hex Color Code");
 		
-		function hexToRgb(hex) {
+		function hex2rgb(hex) {
 			var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
 			hex = hex.replace(shorthandRegex, function(m, r, g, b) {
 				return r + r + g + g + b + b;
