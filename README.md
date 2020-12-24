@@ -25,6 +25,8 @@ To get started with this package, you just need to run `npm i node-govee-led`. N
 	Client.setColor("<hex color code here>");
 	// Set brightness
 	Client.setBrightness(<number from 1-100>);
+	// Get device state
+	Client.getState();
 
 ## How to get an API key
 
