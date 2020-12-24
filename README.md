@@ -143,5 +143,22 @@ Once again, changing the brightness is simple. You need to provide a brightness 
 	Client.setBrightness(50);
 	
 
+## Get device state
+
+To get information about the device's current state (if turned on, brightness level, current color), all you need to do is use .getState().
+**Example:**
+
+    var Govee = require("node-govee-led");
+	
+	var Client = new Govee({
+		apiKey: "<govee api key>",
+		mac: "<MAC address>",
+		model: "<device model>"
+	});
+	
+	// Get device state and log to console
+	Client.getState().then(state => console.log(state));
+	
+
 # Notes
 Have fun and enjoy! If you use this package in a program, it would be awesome if you credited me, but you don't have to.
