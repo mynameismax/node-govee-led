@@ -98,7 +98,7 @@ class GoveeLED {
 		    "device": this.mac,
 		    "model": this.model,
 		    "cmd": {
-		        "name": "temperature",
+		        "name": "colorTem",
 		        "value": temperatureLevel
 		    }
 		};
