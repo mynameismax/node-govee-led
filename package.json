@@ -1,7 +1,7 @@
 {
   "name": "node-govee-led",
   "description": "An unofficial NodeJS wrapper of the official Govee API to control your devices",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "main": "index.js",
   "keywords": [
     "govee",
